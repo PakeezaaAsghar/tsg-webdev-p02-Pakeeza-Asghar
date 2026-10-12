@@ -9,3 +9,197 @@
     <!-- FontAwesome Icon Suite CDN -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
+<body>
+
+    <!-- 1. STICKY NAVIGATION -->
+    <header class="sticky-header">
+        <nav class="navbar">
+            <a href="#" class="logo">Palmar</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-item active">Home</a></li>
+                <li><a href="#about" class="nav-item">Our Story</a></li>
+                <li><a href="#services" class="nav-item">Experience</a></li>
+                <li><a href="#menu-filter" class="nav-item">Menu</a></li>
+                <li><a href="#pricing" class="nav-item">Plans</a></li>
+                <li><a href="#testimonials" class="nav-item">Reviews</a></li>
+                <li><a href="#faq" class="nav-item">FAQ</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- 2. HERO SECTION -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Coastal Flavors, Premium Dining</h1>
+            <p class="hero-subtitle">Experience fresh ocean-to-table seafood and vibrant tropical ambiance at Palmar.</p>
+            <a href="#contact" class="btn btn-primary">Book a Table</a>
+        </div>
+        <!-- Right side masked image matching referenced structural design -->
+        <div class="hero-image-frame"></div>
+    </section>
+
+    <!-- ⭐ 2.5 ADDED ABOUT SECTION ("OUR STORY") -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-img-frame"></div>
+            <div class="about-content">
+                <span class="section-tag">Since 2018</span>
+                <h2>Our Story</h2>
+                <div class="accent-line"></div>
+                <p class="about-text">Palmar was founded on a simple passion for clear coastal flavors and relaxed seaside luxury. We source our seafood directly from local artisan fisheries every morning, combining traditional preparation techniques with contemporary tropical mixology to bring an authentic, unhurried coastal paradise directly to your table.</p>
+                <a href="#services" class="btn btn-secondary">Explore The Experience</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES SECTION (Bento Grid Architecture) -->
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Experience</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-fish"></i></div>
+                <h3>Ocean-to-Table</h3>
+                <p>Freshly caught seafood prepared by elite master chefs daily.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-cocktail"></i></div>
+                <h3>Artisanal Mixology</h3>
+                <p>Handcrafted tropical cocktails designed to inspire your senses.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon-box"><i class="fas fa-umbrella-beach"></i></div>
+                <h3>Seaside Ambiance</h3>
+                <p>An upscale casual environment inspired directly by coastal paradises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ⭐ DYNAMIC SPECIALTIES FILTER SECTION WITH IMAGES -->
+    <section id="menu-filter" class="menu-section">
+        <div class="section-header">
+            <h2>Explore Our Specialties</h2>
+            <div class="divider"></div>
+        </div>
+        
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-category="all">All Dishes</button>
+            <button class="filter-btn" data-category="mains">Mains</button>
+            <button class="filter-btn" data-category="desserts">Desserts</button>
+            <button class="filter-btn" data-category="drinks">Drinks</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+            <!-- Item 1 (Mains) -->
+            <div class="menu-item" data-category="mains">
+                <div class="menu-img-container">
+                    <img src="https://unsplash.com" alt="Seared Atlantic Salmon">
+                </div>
+                <div class="menu-info">
+                    <span class="item-tag">Chef Choice</span>
+                    <h3>Seared Atlantic Salmon <span class="item-price">$38</span></h3>
+                    <p>Wild salmon served over citrus-infused wild rice and roasted coastal greens.</p>
+                </div>
+            </div>
+
+            <!-- Item 2 (Mains) -->
+            <div class="menu-item" data-category="mains">
+                <div class="menu-img-container">
+                    <img src="https://unsplash.com" alt="Garlic Butter Tiger Prawns">
+                </div>
+                <div class="menu-info">
+                    <h3>Garlic Butter Tiger Prawns <span class="item-price">$42</span></h3>
+                    <p>Jumbo tiger prawns grilled over white hot charcoal, brushed with fresh local herbs.</p>
+                </div>
+            </div>
+
+            <!-- Item 3 (Desserts) -->
+            <div class="menu-item" data-category="desserts">
+                <div class="menu-img-container">
+                    <img src="https://unsplash.com" alt="Tropical Mango Mousse">
+                </div>
+                <div class="menu-info">
+                    <h3>Tropical Mango Mousse <span class="item-price">$14</span></h3>
+                    <p>Velvety fresh mango purée topped with light, toasted coconut flakes.</p>
+                </div>
+            </div>
+
+            <!-- Item 4 (Drinks) -->
+            <div class="menu-item" data-category="drinks">
+                <div class="menu-img-container">
+                    <img src="https://unsplash.com" alt="Palmar Signature Mojito">
+                </div>
+                <div class="menu-info">
+                    <h3>Palmar Signature Mojito <span class="item-price">$16</span></h3>
+                    <p>Premium white rum muddled with fresh key limes, raw cane sugar, and wild mint.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PRICING TABLE (3 Plans with Highlighted Option) -->
+    <section id="pricing" class="pricing">
+        <div class="section-header">
+            <h2>Curated Dining Plans</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="pricing-grid">
+            <!-- Plan 1 -->
+            <div class="price-card">
+                <h3>Coastal Lunch</h3>
+                <div class="amount">$45<span class="per">/ guest</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 3-Course Set Menu</li>
+                    <li><i class="fas fa-check"></i> Welcome Mocktail</li>
+                    <li><i class="fas fa-check"></i> Daily 12 PM - 4 PM</li>
+                </ul>
+                <button class="btn btn-secondary">Select Plan</button>
+            </div>
+            
+            <!-- Plan 2 (Highlighted Recommended Plan) -->
+            <div class="price-card featured">
+                <span class="badge">Most Popular</span>
+                <h3>Palmar Signature Dinner</h3>
+                <div class="amount">$95<span class="per">/ guest</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> 5-Course Tasting Menu</li>
+                    <li><i class="fas fa-check"></i> Premium Cocktail Pairing</li>
+                    <li><i class="fas fa-check"></i> Exclusive Terrace Seating</li>
+                </ul>
+                <button class="btn btn-primary">Select Plan</button>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="price-card">
+                <h3>Private Event</h3>
+                <div class="amount">$150<span class="per">/ guest</span></div>
+                <ul class="features">
+                    <li><i class="fas fa-check"></i> Customized Menu Suite</li>
+                    <li><i class="fas fa-check"></i> Private Master Mixologist</li>
+                    <li><i class="fas fa-check"></i> Exclusive Banquet Hall</li>
+                </ul>
+                <button class="btn btn-secondary">Inquire Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TESTIMONIALS SLIDER -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-header">
+            <h2>Guest Stories</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="slider-box">
+            <div class="testimonial-slide active">
+                <p class="quote">"The best seafood tasting menu I have ever had. The tropical drinks were incredible!"</p>
+                <h4 class="author">- Sophia L.</h4>
+            </div>
+            <div class="testimonial-slide">
+                <p class="quote">"Beautiful coastal interior design. It feels like eating at a luxury resort overseas."</p>
+                <h4 class="author">- Marcus T.</h4>
+            </div>
